@@ -1,26 +1,35 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <h1>{{ msg }}</h1>
+  <input v-model="msg"/>
+  <HelloWorld :msg="msg" otherProp="static"/>
+  <HelloAgainWorld :msg="msg" otherProp="static"/>
+  <Counter/>
+  <CounterTwo :count="count" @increment="increment" @decrement="decrement"/>
+  <ReactiveExample/>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
+<script setup>
+import {ref} from 'vue';
+import HelloWorld from "@/components/HelloWorld";
+import HelloAgainWorld from "@/components/HelloAgainWorld";
+import Counter from "@/components/Counter";
+import CounterTwo from "@/components/CounterTwo";
+import ReactiveExample from "@/components/ReactiveExample";
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
+const msg = ref('Hello World');
+
+const count = ref(0);
+
+const increment = (inc = 1) => {
+  count.value += inc;
 }
+
+const decrement = () => {
+  count.value--;
+}
+
+// notes:
+// significant difference in <script setup> and <script>
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
+
