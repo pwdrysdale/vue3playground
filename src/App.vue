@@ -11,6 +11,7 @@
   <UseCounterExample/>
   <UseCounterExample/>
   <UseStateExample/>
+  <UseRegularlyExample/>
 </template>
 
 <script setup>
@@ -24,6 +25,7 @@ import DebounceExample from "@/components/DebounceExample"
 import ScreenDimensionsExample from "@/components/ScreenDimensionsExample"
 import UseCounterExample from "@/components/UseCounterExample.vue"
 import UseStateExample from "@/components/UseStateExample";
+import UseRegularlyExample from "@/components/UseRegularlyExample";
 
 const msg = ref("Hello World")
 
