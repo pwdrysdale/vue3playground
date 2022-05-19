@@ -1,21 +1,26 @@
-import { makeObservable } from "@/designPatterns/makeObservable"
-import { ref } from "vue"
+import {makeObservable} from "@/designPatterns/makeObservable"
+import {ref} from "vue"
 
-const useCounter = (init) => {
-  const { get, set, subscribe } = makeObservable(init)
+const {get, set, subscribe} = makeObservable(0)
 
-  const getCount = () => ref(get())
+const useCounter = (init = 0) => {
+    set(init)
 
-  const increment = () => {
-    console.log(getCount())
-    set(getCount().value + 1)
-  }
+    const count = ref(get())
 
-  const decrement = () => {
-    set(getCount - 1)
-  }
+    subscribe((newCount) => {
+        count.value = newCount
+    })
 
-  return { increment, decrement, subscribe }
+    const increment = () => {
+        set(count.value + 1)
+    }
+
+    const decrement = () => {
+        set(count.value - 1)
+    }
+
+    return {count, increment, decrement}
 }
 
 export default useCounter

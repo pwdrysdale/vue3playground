@@ -1,20 +1,15 @@
 <template>
   <div>
     <h1>Counter - {{ count }}</h1>
+    <h3>Computed Get: {{ count }}</h3>
     <button @click="increment">+</button>
     <button @click="decrement">-</button>
   </div>
 </template>
 
 <script setup>
-import { ref } from "vue"
 import useCounter from "../hooks/useCounter"
 
-const { increment, decrement, subscribe } = useCounter(0)
+const {increment, decrement, count} = useCounter(5)
 
-subscribe((v) => {
-  count.value = v
-})
-
-const count = ref(0)
 </script>

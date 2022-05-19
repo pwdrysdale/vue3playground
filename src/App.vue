@@ -1,18 +1,20 @@
 <template>
   <h1>{{ msg }}</h1>
-  <input v-model="msg" />
-  <HelloWorld :msg="msg" otherProp="static" />
-  <HelloAgainWorld :msg="msg" otherProp="static" />
-  <Counter />
-  <CounterTwo :count="count" @increment="increment" @decrement="decrement" />
-  <ReactiveExample />
-  <DebounceExample />
-  <ScreenDimensionsExample />
-  <UseCounterExample />
+  <input v-model="msg"/>
+  <HelloWorld :msg="msg" otherProp="static"/>
+  <HelloAgainWorld :msg="msg" otherProp="static"/>
+  <Counter/>
+  <CounterTwo :count="count" @increment="increment" @decrement="decrement"/>
+  <ReactiveExample/>
+  <DebounceExample/>
+  <ScreenDimensionsExample/>
+  <UseCounterExample/>
+  <UseCounterExample/>
+  <UseStateExample/>
 </template>
 
 <script setup>
-import { ref } from "vue"
+import {ref} from "vue"
 import HelloWorld from "@/components/HelloWorld"
 import HelloAgainWorld from "@/components/HelloAgainWorld"
 import Counter from "@/components/Counter"
@@ -21,6 +23,7 @@ import ReactiveExample from "@/components/ReactiveExample"
 import DebounceExample from "@/components/DebounceExample"
 import ScreenDimensionsExample from "@/components/ScreenDimensionsExample"
 import UseCounterExample from "@/components/UseCounterExample.vue"
+import UseStateExample from "@/components/UseStateExample";
 
 const msg = ref("Hello World")
 
