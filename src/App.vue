@@ -8,6 +8,7 @@
   <ReactiveExample />
   <DebounceExample />
   <ScreenDimensionsExample />
+  <UseCounterExample />
 </template>
 
 <script setup>
@@ -19,6 +20,7 @@ import CounterTwo from "@/components/CounterTwo"
 import ReactiveExample from "@/components/ReactiveExample"
 import DebounceExample from "@/components/DebounceExample"
 import ScreenDimensionsExample from "@/components/ScreenDimensionsExample"
+import UseCounterExample from "@/components/UseCounterExample.vue"
 
 const msg = ref("Hello World")
 

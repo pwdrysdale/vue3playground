@@ -15,6 +15,8 @@ const useScreenDimensions = () => {
 
   window.addEventListener("resize", updateScreenDimensions)
 
+  updateScreenDimensions()
+
   return {
     screenWidth,
     screenHeight,
