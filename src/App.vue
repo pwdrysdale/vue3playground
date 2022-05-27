@@ -1,22 +1,25 @@
 <template>
   <h1>{{ msg }}</h1>
-  <input v-model="msg" />
-  <HelloWorld :msg="msg" otherProp="static" />
-  <HelloAgainWorld :msg="msg" otherProp="static" />
-  <Counter />
-  <CounterTwo :count="count" @increment="increment" @decrement="decrement" />
-  <ReactiveExample />
-  <DebounceExample />
-  <ScreenDimensionsExample />
-  <UseCounterExample />
-  <UseCounterExample />
-  <UseStateExample />
-  <UseRegularlyExample />
-  <UseEffectExamples />
+  <input v-model="msg"/>
+  <HelloWorld :msg="msg" otherProp="static"/>
+  <HelloAgainWorld :msg="msg" otherProp="static"/>
+  <Counter/>
+  <CounterTwo :count="count" @increment="increment" @decrement="decrement"/>
+  <ReactiveExample/>
+  <DebounceExample/>
+  <ScreenDimensionsExample/>
+  <UseCounterExample/>
+  <UseCounterExample/>
+  <UseStateExample/>
+  <UseRegularlyExample/>
+  <UseEffectExamples/>
+  <UseIsHoveringMousePosition/>
+  <UseGetData/>
+  <UseGetData/>
 </template>
 
 <script setup>
-import { ref } from "vue"
+import {ref} from "vue"
 import HelloWorld from "@/components/HelloWorld"
 import HelloAgainWorld from "@/components/HelloAgainWorld"
 import Counter from "@/components/Counter"
@@ -28,6 +31,8 @@ import UseCounterExample from "@/components/UseCounterExample.vue"
 import UseStateExample from "@/components/UseStateExample"
 import UseRegularlyExample from "@/components/UseRegularlyExample"
 import UseEffectExamples from "@/components/UseEffectExamples"
+import UseIsHoveringMousePosition from "@/components/UseIsHoveringMousePosition";
+import UseGetData from "@/components/UseGetData";
 
 const msg = ref("Hello World")
 

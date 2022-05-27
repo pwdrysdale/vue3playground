@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue"
+import {ref} from "vue"
 import useDebounce from "../hooks/useDebounce"
 
 const live = ref("")
@@ -15,8 +15,8 @@ const handleChange = (e) => {
 
 <template>
   <div>
-    <h1>Debouncing Hook</h1>
-    <input :value="live" @input="handleChange" />
+    <h1>Debouncing Hook - Note that Hooks in Vue are called 'Composables'</h1>
+    <input :value="live" @input="handleChange"/>
     <p>{{ debounceValue }}</p>
   </div>
 </template>
